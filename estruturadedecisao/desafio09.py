@@ -23,9 +23,6 @@ if medio == maior or medio == menor :
 if medio == maior or medio == menor :
     medio = num3
 
-
-
-
 print("maior:", maior)
 print("meio:", medio)
 print("menor:", menor)
