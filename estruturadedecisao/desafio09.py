@@ -16,7 +16,7 @@ if menor > num2:
 if menor > num3:
     menor = num3
 
-medio = num1
+medio = s/n
 
 if medio == maior or medio == menor :
     medio = num2

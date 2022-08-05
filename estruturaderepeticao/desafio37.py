@@ -35,7 +35,7 @@ while True:
 
 mediaalt = alttot/i
 mediapeso = pesotot/i
-print(f"A média de altura é {mediaalt} m, a media de peso é {mediapeso}\nO cliente {cod3} é o mais alto com {alto} m\nO cliente {cod4} é o mais baixo com {baixo} m\n ")
+print(f"A média de altura é {mediaalt:.2f} m, a media de peso é {mediapeso:.2f}\nO cliente {cod3} é o mais alto com {alto} m\nO cliente {cod4} é o mais baixo com {baixo} m")
 print(f"O cliente {cod1} é o mais pesado com {pesado} Kg\nO cliente {cod2} é o mais leve com {leve} Kg")
         
     
