@@ -10,3 +10,4 @@ print("Senha: ",end="")
 for i in range(n):
     print(senha[i], end="")
     
+    #import randon e import string
