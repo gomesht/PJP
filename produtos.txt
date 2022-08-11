@@ -1,0 +1,5 @@
+farinha-4,50
+banana-1,99
+bala-2,50
+maca-3,20
+bala de goma-1,50
