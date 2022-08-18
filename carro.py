@@ -28,9 +28,8 @@ def acelerar_carro():
 def desacelerar_carro():
     global vel, horas
     vel -= 5
-    if vel == 0:
+    if vel <= 0:
         print("O carro está parado")
-    elif vel < 0:
         vel = 0
     horas += 1
 def informacoes():
