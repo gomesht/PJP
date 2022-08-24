@@ -1,12 +1,12 @@
 
 class Pessoa:
 
-    def __init__(self, nome, fome, mana, energia, vida, fomem, manam, energiam, vidam):
+    def __init__(self, nome, fomem, manam, energiam, vidam):
         self.__nome = nome
-        self.__fome = fome
-        self.__mana = mana
-        self.__energia = energia
-        self.__vida = vida
+        self.__fome = fomem
+        self.__mana = manam
+        self.__energia = energiam
+        self.__vida = vidam
         self.__fomem = fomem
         self.__manam = manam
         self.__energiam = energiam
@@ -83,6 +83,7 @@ class Pessoa:
     
     def correr(self):
         self.energia -= 1
+        self.fome -= 1
     
     def dormir(self):
         self.energia = self.energiam
@@ -94,6 +95,7 @@ class Pessoa:
 
     def dano(self):
         self.vida -= 1
+
 
 
 
