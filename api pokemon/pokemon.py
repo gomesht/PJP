@@ -1,4 +1,5 @@
 import requests
+from classes import Pokemon, Agua, Fogo, Veneno, Voador, Terra, Grama, Eletrico, Pedra
 def main():
     try:
         pokemon = escolha_pokemon()
@@ -19,6 +20,42 @@ def importa_infos(p):
     for i in range(len(response["types"])):
         tipos.append(response["types"][i]["type"]["name"])
     imagem = response["sprites"]["versions"]["generation-v"]["black-white"]["animated"]["front_default"]
+    for i in tipos:
+        match i:
+            case "water":
+                poke = Agua(nome,imagem)
+                print(poke.ataque())
+                print(poke.eficacia())
+            case "fire":
+                poke = Fogo(nome,imagem)
+                print(poke.ataque())
+                print(poke.eficacia())
+            case "grass":
+                poke = Grama(nome,imagem)
+                print(poke.ataque())
+                print(poke.eficacia())
+            case "flying":
+                poke = Voador(nome,imagem)
+                print(poke.ataque())
+                print(poke.eficacia())
+            case "poison":
+                poke = Veneno(nome,imagem)
+                print(poke.ataque())
+                print(poke.eficacia())
+            case "electric":
+                poke = Eletrico(nome,imagem)
+                print(poke.ataque())
+                print(poke.eficacia())
+            case "ground":
+                poke = Terra(nome,imagem)
+                print(poke.ataque())
+                print(poke.eficacia())
+            case "rock":
+                poke = Pedra(nome,imagem)
+                print(poke.ataque())
+                print(poke.eficacia())
+        
     return{"Nome:":nome, "Peso:":peso, "Tamanho:":tamanho,"Tipos:":tipos,"Imagem:":imagem}
+    
 
 main()

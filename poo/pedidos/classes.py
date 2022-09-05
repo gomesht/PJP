@@ -26,7 +26,7 @@ class Produto:
         global listaProdutos
         listaProdutos.append(self)
     def __str__(self):
-        return f"{self.codigo}, {self.descricao}"
+        return f"Codigo: {self.codigo} Valor: {self.valor} Descrição: {self.descricao}"
 
 camisa = Produto("0101", 30, "Blusa de algodão estampada")
 bone = Produto("0102", 20, "Boné verde")
@@ -35,10 +35,11 @@ calca = Produto("0103", 80, "Calça jeans")
 
 pedido1 = Pedido()
 pedido1.adicionar_item(calca,3)
-print(pedido1.valor_total)
-print(pedido1.pedido[0].produto.descricao)
+# print(pedido1.valor_total)
+# print(pedido1.pedido[0].produto.descricao)
 for i in listaProdutos:
     print(i)
-print(calca.codigo)
+# print(calca.codigo)
+print(listaProdutos)
 
 
