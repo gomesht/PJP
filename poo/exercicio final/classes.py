@@ -85,12 +85,17 @@ class Banco:
         cliente.criarConta()
         self.clientes.append(cliente)
 
-    def autenticacao(self, altCliente, altConta, altAgencia):
+    def autenticacao(self):
+        altCliente = input("Nome do cliente: ") 
+        altConta = input("Número da conta: ")
+        altAgencia = input("Número da agência: ")
         c = 0
-        if altCliente in self.clientes:
-            c += 1
-        if int(altConta) in self.clientes:
-            c += 1
+        for i in range(len(self.clientes)):
+            if altCliente == self.clientes[i].nome:
+                c += 1
+            if int(altConta) == self.clientes[i].conta.numero:
+                c += 1
+
         if int(altAgencia) in self.agencias:
             c += 1
         if c == 3:
@@ -103,4 +108,7 @@ class Banco:
 bancodobrasil = Banco()
 bancodobrasil.addAgencia()
 bancodobrasil.addCliente()
-print(bancodobrasil.clientes)
+print(bancodobrasil.clientes[0].nome)
+print(bancodobrasil.clientes[0].idade)
+print(bancodobrasil.clientes[0].conta.saldo)
+print(bancodobrasil.autenticacao())
